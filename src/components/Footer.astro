@@ -1,0 +1,47 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="py-12 bg-black border-t border-white/10">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-12 text-center items-center">
+                <!-- Hackathon Description -->
+                <div class="flex flex-col items-center">
+                    <h3 class="text-2xl font-bold mb-4 glitch">
+                        <span class="text-white">HACK</span>
+                        <span class="text-[#0066ff]">//</span>
+                        <span class="text-white">UTEC</span>
+                    </h3>
+                    <p class="text-white/60">
+                        La experiencia de hackathon más innovadora, diseñada para romper límites y crear el futuro.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Accesos Directos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-white/60 hover:text-white">Acerca</a></li>
+                        <li><a href="#schedule" class="text-white/60 hover:text-white">Calendario</a></li>
+                        <li><a href="#prizes" class="text-white/60 hover:text-white">Premios</a></li>
+                        <li><a href="#register" class="text-white/60 hover:text-white">Registrarse</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contacto</h4>
+                    <a href="mailto:mmorales@utec.edu.pe" class="text-[#0066ff]">mmorales@utec.edu.pe</a>
+                    <a href="mailto:surbina@utec.edu.pe" class="text-[#0066ff]">surbina@utec.edu.pe</a>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-6 text-center">
+                <p class="text-white/60 text-sm">
+                    © { currentYear } HACK//UTEC.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
