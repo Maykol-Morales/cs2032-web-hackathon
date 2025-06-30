@@ -1,0 +1,398 @@
+---
+const allTeams = {
+    winners: {
+        first: {
+            name: "Todo va a estar Bien",
+            participants: [
+                { name: "Mateo Ismael Rodríguez Ramos", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Mateo_Ismael_Rodriguez_Ramos.png" },
+                { name: "Nayeli Fernanda Guzman Huayta", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Nayeli_Fernanda_Guzman_Huayta.png" },
+                { name: "Adrián Aron Fabricio Alberto Urbina Mendoza", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Adrian_Aron_Urbina_Mendoza.png" }
+            ]
+        },
+        second: {
+            name: "Gpteros",
+            participants: [
+                { name: "Marco Antonio Madrid Gonzales", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Marco_Antonio_Madrid_Gonzales.png" },
+                { name: "Llorent Eloy Nunayalle Brañes", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Llorent_Eloy_Nunayalle_Branes.png" },
+                { name: "Ronal Jesus Condor Blas", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Ronal_Jesus_Condor_Blas.png" }
+            ]
+        },
+        third: {
+            name: "HackaCloud",
+            participants: [
+                { name: "Luis Javier Millones Carrasco", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Luis_Javier_Millones_Carrasco.png" },
+                { name: "Paul Rios Vasquez", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Paul_Rios_Vasquez.png" },
+                { name: "Adrian Alejandro Montes Vargas", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Adrian_Alejandro_Montes_Vargas.png" }
+            ]
+        }
+    },
+    finalists: [
+        {
+            name: "Seguidores de Omejia",
+            participants: [
+                { name: "Henry Rutber Quispe Sutta", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Henry_Rutber_Quispe_Sutta.png" },
+                { name: "Isaac Gamero del Aguila", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Isaac_Gamero_del_Aguila.png" },
+                { name: "Michael Castillo Melchor", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Michael_Castillo_Melchor.png" }
+            ]
+        },
+        {
+            name: "Batifamilia",
+            participants: [
+                { name: "Rafael Humberto Ramos Huamaní", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Rafael_Humberto_Ramos_Huamani.png" },
+                { name: "Alessandra Valeria Silva Rios", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Alessandra_Valeria_Silva_Rios.png" },
+                { name: "Elvis Alejandro Lopez Gambini", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Elvis_Alejandro_Lopez_Gambini.png" }
+            ]
+        },
+        {
+            name: "S3ñores del Front",
+            participants: [
+                { name: "Sergio Felipe Delgado Amado", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Sergio_Felipe_Delgado_Amado.png" },
+                { name: "Gianfranco Gonzalo Cordero Aguirre", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Gianfranco_Gonzalo_Cordero_Aguirre.png" },
+                { name: "Federico Iribar Casanova", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Federico_Iribar_Casanova.png" }
+            ]
+        }
+    ],
+    // Teams that successfully completed the challenge - 75 participation points
+    successful: [
+        {
+            name: "Los Sipser",
+            participants: [
+                { name: "Sebastián Antonio Hernández Miñano", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Sebastian_Antonio_Hernandez_Minano.png" },
+                { name: "David Andres Huette Ospino", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/David_Andres_Huette_Ospino.png" },
+                { name: "Luis Anthony Romero Padilla", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Luis_Anthony_Romero_Padilla.png" }
+            ]
+        },
+        {
+            name: "Monarchs of the Cloud",
+            participants: [
+                { name: "Dylan Andres Cabezas Ramirez", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Dylan_Andres_Cabezas_Ramirez.png" },
+                { name: "Juan Carlos Paredes Alva", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Juan_Carlos_Paredes_Alva.png" },
+                { name: "David Marcelo Quispe Velasquez", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/David_Marcelo_Quispe_Velasquez.png" }
+            ]
+        },
+        {
+            name: "aws lovers",
+            participants: [
+                { name: "Laura Gabriela Nagamine Oshiro", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Laura_Gabriela_Nagamine_Oshiro.png" },
+                { name: "Mauro Bobadilla Castillo", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Mauro_Bobadilla_Castillo.png" },
+                { name: "Salvador Donayre Epifanía", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Salvador_Donayre_Epifania.png" }
+            ]
+        },
+        {
+            name: "75 puntazos",
+            participants: [
+                { name: "Gabriel Vargas Urmeneta", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Gabriel_Vargas_Urmeneta.png" },
+                { name: "Paris Lenard Herrera Torres", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Paris_Lenard_Herrera_Torres.png" }
+            ]
+        },
+        {
+            name: "AlfaMegaMaravillabombaprox",
+            participants: [
+                { name: "Thiago Gabriel Rivera Matta", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Thiago_Gabriel_Rivera_Matta.png" },
+                { name: "Granit Espinoza Salazar", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Granit_Espinoza_Salazar.png" }
+            ]
+        },
+        {
+            name: "Mother Nature's Sons",
+            participants: [
+                { name: "Juan Diego Laredo Yarma", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Juan_Diego_Laredo_Yarma.png" },
+                { name: "Lucas Armando Aliaga Mena", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Lucas_Armando_Aliaga_Mena.png" }
+            ]
+        },
+        {
+            name: "equipo alfa buena maravilla onda dinamita escuadrón lobo",
+            participants: [
+                { name: "Rolando Diaz Jara", certificateUrl: "https://certificates.hackshock.com/cert34.pdf" },
+                { name: "Jean Paul Miraval Obregón", certificateUrl: "https://certificates.hackshock.com/cert35.pdf" },
+                { name: "Brando López carrera", certificateUrl: "https://certificates.hackshock.com/cert36.pdf" }
+            ]
+        },
+        {
+            name: "Rimac",
+            participants: [
+                { name: "Jorge Armando Martinez Palomino", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Rolando_Diaz_Jara.png" },
+                { name: "David Alexander Salaverry Cuzcano", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/David_Alexander_Salaverry_Cuzcano.png" },
+                { name: "Jireh Eliseo Cervantes Ordóñez", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Jireh_Eliseo_Cervantes_Ordonez.png" }
+            ]
+        },
+        {
+            name: "OnlyUML",
+            participants: [
+                { name: "Piero Pilco Reynoso", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Piero_Pilco_Reynoso.png" }
+            ]
+        },
+        {
+            name: "GopherWarriors",
+            participants: [
+                { name: "Javier Ignacio Leon Olivares Sarmiento", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Javier_Ignacio_Leon_Olivares_Sarmiento.png" },
+                { name: "José Eduardo Huamani Ñaupas", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Jose_Eduardo_Huamani_Naupas.png" },
+                { name: "Juan Diego Luque Segura", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Juan_Diego_Luque_Segura.png" }
+            ]
+        }
+    ],
+    // Teams that participated but didn't meet challenge requirements - 50 participation points
+    participating: [
+        {
+            name: "EQUIPO ALFA BUENA MARAVILLA ONDA DINAMITA ESCUADRON LOBO",
+            participants: [
+                { name: "Juan Rodolfo Inca Acuña", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Juan_Rodolfo_Inca_Acuna.png" },
+                { name: "Rodrigo Edersson Gallegos Chavez", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Rodrigo_Edersson_Gallegos_Chavez.png" },
+                { name: "Jhon Erick Chilo Gonzales", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Jhon_Erick_Chilo_Gonzales.png" }
+            ]
+        },
+        {
+            name: "RosExp2030",
+            participants: [
+                { name: "Gian Marco Arteaga Alvarez", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Gian_Marco_Arteaga_Alvarez.png" },
+                { name: "Sergio Marcelo Herrera Jave", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Sergio_Marcelo_Herrera_Jave.png" }
+            ]
+        },
+        {
+            name: "Time Bomb",
+            participants: [
+                { name: "Yitzhak Abraham Namihas Millan", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Yitzhak_Abraham_Namihas_Millan.png" },
+                { name: "Carla Viviana Molina Álvarez", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Carla_Viviana_Molina_Alvarez.png" }
+            ]
+        },
+        {
+            name: "ABC",
+            participants: [
+                { name: "Mikael Quinto Ramos", certificateUrl: "https://diplomas-hackathon-cs2032.s3.us-east-1.amazonaws.com/Mikael_Quinto_Ramos.png" }
+            ]
+        }
+    ]
+};
+---
+
+<section id="results" class="py-20 bg-black relative">
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 tracking-tighter">
+                <span class="gradient-text">Resultados</span>
+            </h2>
+
+            <p class="text-xl text-white/80 mb-8 max-w-xl mx-auto">
+                ¡HACK//UTEC 2025 ha concluido! Felicitaciones a todos los participantes. Haz clic en cualquier equipo para ver a los integrantes y descargar los certificados.
+            </p>
+
+            <!-- Event Completed Status -->
+            <div class="bg-green-500/10 border border-green-500/30 p-4 mb-8 inline-block">
+                <div class="flex items-center justify-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                    </svg>
+                    <span class="text-green-400 font-bold">HACKATHON</span>
+                </div>
+            </div>
+
+            <!-- Winners Section -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold mb-8 text-[#0066ff]">🏆 Ganadores</h3>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <!-- 1st Place -->
+                    <div class="relative">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-black font-bold text-sm z-10">1</div>
+                        <div class="team-card bg-gradient-to-br from-yellow-500/20 to-yellow-600/10 border border-yellow-500/30 p-6 cursor-pointer hover:border-yellow-500/50 transition-all" data-team="winner-first">
+                            <h4 class="text-xl font-bold text-yellow-400 mb-2">🥇 1er Puesto</h4>
+                            <p class="text-white/90">{ allTeams.winners.first.name }</p>
+                            <div class="text-sm text-white/60 mt-2">Haz clic para ver a los participantes</div>
+                        </div>
+                    </div>
+
+                    <!-- 2nd Place -->
+                    <div class="relative">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center text-black font-bold text-sm z-10">2</div>
+                        <div class="team-card bg-gradient-to-br from-gray-400/20 to-gray-500/10 border border-gray-400/30 p-6 cursor-pointer hover:border-gray-400/50 transition-all" data-team="winner-second">
+                            <h4 class="text-xl font-bold text-gray-300 mb-2">🥈 2do Puesto</h4>
+                            <p class="text-white/90">{ allTeams.winners.second.name }</p>
+                            <div class="text-sm text-white/60 mt-2">Haz clic para ver a los participantes</div>
+                        </div>
+                    </div>
+
+                    <!-- 3rd Place -->
+                    <div class="relative">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center text-black font-bold text-sm z-10">3</div>
+                        <div class="team-card bg-gradient-to-br from-amber-600/20 to-amber-700/10 border border-amber-600/30 p-6 cursor-pointer hover:border-amber-600/50 transition-all" data-team="winner-third">
+                            <h4 class="text-xl font-bold text-amber-400 mb-2">🥉 3er Puesto</h4>
+                            <p class="text-white/90">{ allTeams.winners.third.name }</p>
+                            <div class="text-sm text-white/60 mt-2">Haz clic para ver a los participantes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Finalists -->
+                <h4 class="text-2xl font-bold mb-6 text-[#ff00ff]">🎯 Finalistas</h4>
+                <div class="grid md:grid-cols-3 gap-4 mb-8">
+                    { allTeams.finalists.map((team, index) => (
+                            <div class="team-card bg-gradient-to-br from-purple-500/20 to-purple-600/10 border border-purple-500/30 p-4 cursor-pointer hover:border-purple-500/50 transition-all" data-team={ `finalist-${ index }` }>
+                                <h5 class="font-bold text-purple-300 mb-2">{ team.name }</h5>
+                                <div class="text-sm text-white/60">Haz clic para ver a los participantes</div>
+                            </div>
+                    )) }
+                </div>
+            </div>
+
+            <!-- Other Teams Section -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-8 text-white/80">Equipos Participantes</h3>
+
+                <!-- Teams that Successfully Completed the Challenge -->
+                <div class="mb-8">
+                    <div class="flex items-center justify-center gap-3 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                        </svg>
+                        <h4 class="text-xl font-bold text-green-400">✅ Desafío completado con Éxito</h4>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        { allTeams.successful.map((team, index) => (
+                                <div class="team-card bg-gradient-to-br from-green-500/20 to-green-600/10 border border-green-500/30 p-4 cursor-pointer hover:border-green-500/50 transition-all w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.67rem)]" data-team={ `successful-${ index }` }>
+                                    <div class="flex items-center justify-center gap-2 mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        <h5 class="font-bold text-white/90">{ team.name }</h5>
+                                    </div>
+                                    <div class="text-sm text-white/60">Haz clic para ver a los participantes.</div>
+                                </div>
+                        )) }
+                    </div>
+                </div>
+
+                <!-- Teams that Participated -->
+                <div>
+                    <div class="flex items-center justify-center gap-3 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="m22 21-3-3m0 0a5 5 0 1 0-7-7 5 5 0 0 0 7 7Z"></path>
+                        </svg>
+                        <h4 class="text-xl font-bold text-blue-400">🎯 Participó en el Desafío</h4>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        { allTeams.participating.map((team, index) => (
+                                <div class="team-card bg-gradient-to-br from-blue-500/20 to-blue-600/10 border border-blue-500/30 p-4 cursor-pointer hover:border-blue-500/50 transition-all w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.67rem)]" data-team={ `participating-${ index }` }>
+                                    <div class="flex items-center justify-center gap-2 mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                        </svg>
+                                        <h5 class="font-bold text-white/90">{ team.name }</h5>
+                                    </div>
+                                    <div class="text-sm text-white/60">Haz clic para ver a los participantes.</div>
+                                </div>
+                        )) }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Details Modal -->
+    <div id="teamModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-black border border-white/20 max-w-md w-full p-6 relative">
+            <button id="closeModal" class="absolute top-4 right-4 text-white/60 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m18 6-12 12"></path>
+                    <path d="m6 6 12 12"></path>
+                </svg>
+            </button>
+
+            <h3 id="modalTeamName" class="text-2xl font-bold mb-4 text-[#0066ff]"></h3>
+            <h4 class="text-lg font-bold mb-3 text-white/80">Miembros:</h4>
+            <div id="modalParticipants" class="space-y-2">
+                <!-- Participants will be populated here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<script define:vars={ { allTeams } }>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Use the same data structure from Astro
+        const teamData = {};
+
+        // Build teamData from allTeams
+        teamData['winner-first'] = allTeams.winners.first;
+        teamData['winner-second'] = allTeams.winners.second;
+        teamData['winner-third'] = allTeams.winners.third;
+
+        allTeams.finalists.forEach((team, index) => {
+            teamData[`finalist-${ index }`] = team;
+        });
+
+        allTeams.successful.forEach((team, index) => {
+            teamData[`successful-${ index }`] = team;
+        });
+
+        allTeams.participating.forEach((team, index) => {
+            teamData[`participating-${ index }`] = team;
+        });
+
+        const modal = document.getElementById('teamModal');
+        const modalTeamName = document.getElementById('modalTeamName');
+        const modalParticipants = document.getElementById('modalParticipants');
+        const closeModal = document.getElementById('closeModal');
+
+        // Add click listeners to all team cards
+        document.querySelectorAll('.team-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const teamId = card.getAttribute('data-team');
+                const team = teamData[teamId];
+
+                if (team) {
+                    modalTeamName.textContent = team.name;
+                    modalParticipants.innerHTML = '';
+
+                    team.participants.forEach(participant => {
+                        const participantDiv = document.createElement('div');
+                        participantDiv.className = 'p-3 border border-white/10 bg-white/5 hover:bg-white/10 transition-colors cursor-pointer';
+                        participantDiv.innerHTML = `
+              <div class="flex items-center justify-between">
+                <span class="text-white/90">${ participant.name }</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#0066ff]">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7,10 12,15 17,10"></polyline>
+                  <line x1="12" x2="12" y1="15" y2="3"></line>
+                </svg>
+              </div>
+            `;
+
+                        participantDiv.addEventListener('click', () => {
+                            // Create a temporary link to download the certificate
+                            const link = document.createElement('a');
+                            link.href = participant.certificateUrl;
+                            link.download = `${ participant.name }_Certificate.pdf`;
+                            link.target = '_blank';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        });
+
+                        modalParticipants.appendChild(participantDiv);
+                    });
+
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                }
+            });
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        });
+    });
+</script>
