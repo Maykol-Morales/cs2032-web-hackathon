@@ -1,0 +1,114 @@
+---
+const prizes = [
+    {
+        place: "1.º Puesto",
+        examPoints: "+3",
+        participationPoints: "250",
+        color: "#0066ff"
+    },
+    {
+        place: "2.º Puesto",
+        examPoints: "+2",
+        participationPoints: "200",
+        color: "#ff00ff"
+    },
+    {
+        place: "3.º Puesto",
+        examPoints: "+1",
+        participationPoints: "150",
+        color: "#00ffff"
+    }
+];
+---
+
+<section id="prizes" class="py-20 bg-black relative">
+    <div class="absolute inset-0 z-0 opacity-30">
+        <div class="h-full w-full bg-[radial-gradient(circle_at_center,_var(--accent)_0%,_transparent_35%)]"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <h2 class="text-5xl md:text-6xl font-bold mb-4 tracking-tighter text-center">
+            <span class="gradient-text">Premios</span>
+        </h2>
+        <p class="text-xl text-white/70 text-center mb-12 max-w-2xl mx-auto">
+            Estos premios aplican para el curso de Cloud Computing 2025-1
+        </p>
+
+        <div class="max-w-5xl mx-auto">
+            <!-- Main Prize Table -->
+            <div class="hidden md:block overflow-hidden border border-white/10 mb-16">
+                <table class="w-full text-center">
+                    <thead>
+                    <tr>
+                        <th class="p-4 bg-white/5 border-b border-white/10">
+                            <h3 class="text-xl font-bold">
+                                Clasificación
+                            </h3>
+                        </th>
+                        <th class="p-4 bg-white/5 border-b border-white/10 text-center">
+                            <h3 class="text-xl font-bold">
+                                Examen Final
+                            </h3>
+                        </th>
+                        <th class="p-4 bg-white/5 border-b border-white/10 text-center">
+                            <h3 class="text-xl font-bold">
+                                Participación
+                            </h3>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    { prizes.map((prize, _) => (
+                            <tr class="hover:bg-white/5">
+                                <td class="p-4 border-b border-white/10 font-bold" style={ `color: ${ prize.color }` }>
+                                    { prize.place }
+                                </td>
+                                <td class="p-4 border-b border-white/10 text-center">
+                  <span class="inline-block px-3 py-1 bg-[#0066ff]/20 text-[#0066ff] font-bold">
+                    { prize.examPoints } puntos
+                  </span>
+                                </td>
+                                <td class="p-4 border-b border-white/10 text-center">
+                  <span class="inline-block px-3 py-1 bg-[#ff00ff]/20 text-[#ff00ff] font-bold">
+                    { prize.participationPoints } puntos
+                  </span>
+                                </td>
+                            </tr>
+                    )) }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="md:hidden space-y-4 mb-16">
+                {prizes.map((prize) => (
+                        <div class="border border-white/10 bg-black/50 backdrop-blur-sm overflow-hidden">
+                            <div class="p-4 border-b border-white/10 font-bold text-xl text-center" style={`color: ${prize.color}; background-color: rgba(255,255,255,0.05);`}>
+                                {prize.place}
+                            </div>
+                            <div class="p-4 space-y-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-white/70">Examen Final:</span>
+                                    <span class="inline-block px-3 py-1 bg-[#0066ff]/20 text-[#0066ff] font-bold">
+                  {prize.examPoints} puntos
+                </span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-white/70">Participación:</span>
+                                    <span class="inline-block px-3 py-1 bg-[#ff00ff]/20 text-[#ff00ff] font-bold">
+                  {prize.participationPoints} puntos
+                </span>
+                                </div>
+                            </div>
+                        </div>
+                ))}
+            </div>
+
+            <!-- Participation Notice -->
+            <div class="p-6 border border-[#0066ff] bg-[#0066ff]/10 text-center">
+                <p class="text-white/70">
+                    Todos los equipos que participen y entreguen un proyecto recibirán <span class="text-[#ff00ff] font-bold">75 puntos</span>, sin importar el puesto obtenido.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
