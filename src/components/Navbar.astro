@@ -1,3 +1,12 @@
+---
+export interface Props {
+    showRegister?: boolean;
+    showRubric?: boolean;
+}
+
+const { showRegister = true, showRubric = false } = Astro.props;
+---
+
 <nav class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" class="text-2xl font-bold tracking-tighter">
@@ -7,11 +16,16 @@
         </a>
         <div class="hidden md:flex space-x-8">
             <a href="#about" class="text-white/70 hover:text-white transition-colors">Acerca</a>
+            {showRubric && (
+                <a href="#rubric" class="text-white/70 hover:text-white transition-colors">Rúbrica</a>
+            )}
             <a href="#schedule" class="text-white/70 hover:text-white transition-colors">Calendario</a>
             <a href="#prizes" class="text-white/70 hover:text-white transition-colors">Premios</a>
         </div>
-        <a href="#register" class="px-6 py-2 bg-[#0066ff] text-white font-bold hover:bg-[#0052cc] transition-colors">
-            Registrarse
-        </a>
+        {showRegister && (
+            <a href="#register" class="px-6 py-2 bg-[#0066ff] text-white font-bold hover:bg-[#0052cc] transition-colors">
+                Registrarse
+            </a>
+        )}
     </div>
 </nav>

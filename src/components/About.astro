@@ -46,8 +46,208 @@
             </div>
 
             <div class="text-center mt-16 p-8 border border-white/10 bg-white/5 backdrop-blur-sm">
-                <h3 class="text-2xl font-bold mb-4">Reto: <span class="text-[#0066ff]">undefined</span></h3>
+                <h3 class="text-2xl font-bold mb-4">
+                    Reto: <span class="text-[#0066ff]">Arquitectura Basada en Eventos e Integración con LLMs</span>
+                </h3>
+                <p class="text-white/70 mb-6 max-w-2xl mx-auto">
+                    Diseña e implementa una solución innovadora con IA generativa, usando una arquitectura asíncrona, serverless y fácilmente desplegable en la nube.
+                </p>
+                <button
+                    type="button"
+                    class="challenge-open inline-flex items-center gap-2 py-3 px-8 bg-[#0066ff] text-white font-bold hover:bg-[#0052cc] transition-all transform hover:scale-105"
+                >
+                    Ver reto completo
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17L17 7"></path>
+                        <path d="M7 7h10v10"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Challenge Modal -->
+    <div
+        class="challenge-modal fixed inset-0 z-50 flex items-start justify-center p-4 md:p-8 bg-black/80 backdrop-blur-sm"
+        data-open="false"
+        aria-hidden="true"
+    >
+        <div
+            class="challenge-modal-content relative w-full max-w-4xl max-h-[85vh] overflow-y-auto border border-white/10 bg-[#0a0a0a]"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="challenge-title"
+        >
+            <button
+                type="button"
+                class="challenge-close absolute top-4 right-4 p-2 text-white/60 hover:text-white transition-colors"
+                aria-label="Cerrar"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="p-8 md:p-12">
+                <h3 id="challenge-title" class="text-3xl md:text-4xl font-bold mb-6 pr-10">
+                    <span class="text-[#0066ff]">Reto:</span> Arquitectura Basada en Eventos e Integración con LLMs
+                </h3>
+
+                <div class="space-y-10 text-white/80">
+                    <section>
+                        <h4 class="text-xl font-bold mb-3 text-[#00ccff]">Objetivo</h4>
+                        <p>
+                            Diseñar e implementar una solución innovadora basada en Inteligencia Artificial (LLMs) que resuelva un problema real a elección del equipo. El enfoque principal no es sólo la invocación del modelo, sino el diseño de una arquitectura basada en eventos, asíncrona y fácilmente desplegable. Además, los equipos deberán proporcionar un contexto claro sobre la problemática abordada y los casos de uso propuestos.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h4 class="text-xl font-bold mb-4 text-[#00ccff]">Lineamientos Técnicos Obligatorios</h4>
+                        <ul class="space-y-6">
+                            <li>
+                                <h5 class="font-bold text-white mb-1">Arquitectura Basada en Eventos</h5>
+                                <p>La solución debe incluir un flujo de trabajo asíncrono y orientado a eventos. No se limita el uso a una sola nube; los estudiantes pueden elegir el proveedor con el que estén más familiarizados (AWS, GCP, Azure, OCI, etc.), utilizando servicios como AWS SQS, AWS EventBridge, Google Cloud Pub/Sub, entre otros. Se debe tratar en lo posible que toda la arquitectura sea serverless. Excepcionalmente, se permitirá el uso de una Máquina Virtual (MV) con Docker para levantar componentes específicos que lo requieran estrictamente (por ejemplo, una base de datos vectorial para un enfoque RAG).</p>
+                            </li>
+                            <li>
+                                <h5 class="font-bold text-white mb-1">Interfaz de Usuario (Frontend)</h5>
+                                <p>Se debe desarrollar un frontend desde donde se pueda lanzar la ejecución del flujo de trabajo y visualizar los resultados. Este frontend podrá ser desplegado en cualquiera de las nubes mencionadas anteriormente. Además, debe permitir eventualmente la subida de un archivo o archivos con los inputs que se van a procesar de forma masiva.</p>
+                            </li>
+                            <li>
+                                <h5 class="font-bold text-white mb-1">Resiliencia y Manejo de Límites de API</h5>
+                                <p>El sistema debe integrarse con una API de LLM (como <a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer" class="text-[#0066ff] hover:underline">Groq</a>). Se debe demostrar el procesamiento masivo pero controlado de información (lotes pequeños de 20 a 30 elementos). Es necesario implementar mecanismos de control de errores y políticas de reintentos para manejar posibles bloqueos o restricciones por límites de peticiones de la API.</p>
+                            </li>
+                            <li>
+                                <h5 class="font-bold text-white mb-1">Despliegue Reproducible</h5>
+                                <p>Para usar la plataforma, los equipos deben incluir una documentación con un manual paso a paso detallado para que se pueda probar la solución sin inconvenientes. Si utilizaron componentes Docker de forma excepcional, deben proveer un docker-compose bien estructurado.</p>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h4 class="text-xl font-bold mb-4 text-[#00ccff]">Entregables Esperados</h4>
+                        <ul class="grid md:grid-cols-2 gap-4">
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#ff00ff] font-bold">01</span>
+                                <span>Repositorio de Código: frontend, backend y funciones serverless.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#ff00ff] font-bold">02</span>
+                                <span>Contexto de la Problemática: documento con el problema real, casos de uso e impacto esperado.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#ff00ff] font-bold">03</span>
+                                <span>Manual de Despliegue: paso a paso para levantar y probar la plataforma, más docker-compose si aplica.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#ff00ff] font-bold">04</span>
+                                <span>Diagrama de Arquitectura: flujo de eventos, datos y servicios de nube utilizados.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#ff00ff] font-bold">05</span>
+                                <span>Enlace del Frontend Desplegado: URL pública funcional para probar la interfaz.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#ff00ff] font-bold">06</span>
+                                <span>Video en YouTube con una demo completa de las funcionalidades.</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="p-6 border border-[#0066ff]/30 bg-[#0066ff]/10">
+                        <h4 class="text-xl font-bold mb-3 text-[#0066ff]">Ejemplo de Referencia</h4>
+                        <p class="mb-4 text-sm text-white/70">
+                            <strong>Disclaimer:</strong> este caso de uso es solo explicativo para entender la dinámica esperada y <strong>NO puede ser presentado</strong> por los equipos en la hackathon.
+                        </p>
+                        <h5 class="font-bold text-white mb-2">Caso de uso referencial: Clasificador automático de feedback de clientes</h5>
+                        <ol class="list-decimal list-inside space-y-2 ml-1">
+                            <li>Desde el frontend, el usuario sube un archivo CSV con 30 comentarios de clientes.</li>
+                            <li>El backend lee el archivo y dispara un evento independiente por cada comentario hacia una cola de mensajes o bus de eventos (ej. AWS SQS, GCP Pub/Sub, o AWS EventBridge).</li>
+                            <li>Una función serverless consume estos eventos de la cola de forma asíncrona y envía el texto a la API del LLM (Groq) para clasificar el sentimiento (positivo, negativo, neutral).</li>
+                            <li>Si la API del LLM rechaza una petición porque se alcanzó el límite de uso masivo, la función captura el error y devuelve el mensaje a la cola con un retraso (reintento) para procesarlo más tarde sin perder la data.</li>
+                            <li>Finalmente, los resultados procesados se guardan y el usuario puede visualizar en el frontend un panel con la clasificación final de cada uno de los comentarios.</li>
+                        </ol>
+                    </section>
+
+                    <div class="pt-6 border-t border-white/10">
+                        <a
+                            href="/Reto%20Hackathon%20Cloud.pdf"
+                            download
+                            class="inline-flex items-center justify-center gap-2 w-full md:w-auto py-3 px-6 border border-[#0066ff] text-[#0066ff] font-bold hover:bg-[#0066ff] hover:text-white transition-colors"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Descargar reto en PDF
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const section = document.querySelector('#about');
+        const modal = section?.querySelector('.challenge-modal');
+        const content = section?.querySelector('.challenge-modal-content');
+        const openBtn = section?.querySelector('.challenge-open');
+        const closeBtn = section?.querySelector('.challenge-close');
+
+        if (!modal || !openBtn || !closeBtn || !content) return;
+
+        const openModal = () => {
+            modal.setAttribute('data-open', 'true');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            closeBtn.focus();
+        };
+
+        const closeModal = () => {
+            modal.setAttribute('data-open', 'false');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            openBtn.focus();
+        };
+
+        openBtn.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.getAttribute('data-open') === 'true') {
+                closeModal();
+            }
+        });
+    });
+</script>
+
+<style>
+    .challenge-modal {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+    }
+
+    .challenge-modal[data-open="true"] {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .challenge-modal-content {
+        transform: translateY(20px);
+        transition: transform 0.2s ease;
+    }
+
+    .challenge-modal[data-open="true"] .challenge-modal-content {
+        transform: translateY(0);
+    }
+</style>

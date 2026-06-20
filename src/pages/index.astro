@@ -5,18 +5,23 @@ import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import Schedule from '../components/Schedule.astro';
 import Prizes from '../components/Prizes.astro';
+import Rubric from '../components/Rubric.astro';
 import Register from '../components/Register.astro';
 import Footer from '../components/Footer.astro';
+
+const showRegister = false;
+const showRubric = true;
 ---
 
 <Layout title="HACK//UTEC">
-    <Navbar/>
+    <Navbar showRegister={showRegister} showRubric={showRubric}/>
     <main>
-        <Hero/>
+        <Hero showRegister={showRegister}/>
         <About/>
+        <Rubric show={showRubric}/>
         <Schedule/>
         <Prizes/>
-        <Register/>
+        <Register show={showRegister}/>
     </main>
-    <Footer/>
+    <Footer showRegister={showRegister} showRubric={showRubric}/>
 </Layout>

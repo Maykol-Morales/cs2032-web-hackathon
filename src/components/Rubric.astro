@@ -1,0 +1,167 @@
+---
+export interface Props {
+    show?: boolean;
+}
+
+const { show = false } = Astro.props;
+
+const rubric = [
+    {
+        criterion: "Contexto de la Problemática e Impacto",
+        deliverable: "Documento/Sección de Contexto",
+        levels: [
+            { score: "4", label: "Excelente", description: "Problema real claro y profundo. Casos de uso relevantes e impacto con LLM perfectamente justificado." },
+            { score: "3", label: "Bueno", description: "Problema real y casos de uso aceptables, pero la justificación del impacto carece de algo de profundidad." },
+            { score: "2", label: "Regular", description: "Problema y casos de uso superficiales o genéricos. El impacto esperado no está claro." },
+            { score: "0-1", label: "Deficiente", description: "No se incluye el documento de contexto o no se entiende qué problema resuelve." }
+        ]
+    },
+    {
+        criterion: "Diseño y Diagrama de Arquitectura",
+        deliverable: "Diagrama de Arquitectura",
+        levels: [
+            { score: "4", label: "Excelente", description: "Diagrama claro y preciso. Arquitectura 100% basada en eventos, asíncrona y predominantemente serverless." },
+            { score: "3", label: "Bueno", description: "Diagrama comprensible. Mayormente asíncrona y serverless, pero con pequeños cuellos de botella o dependencias síncronas." },
+            { score: "2", label: "Regular", description: "Diagrama confuso o incompleto. Depende fuertemente de procesos síncronos o MV no justificadas." },
+            { score: "0-1", label: "Deficiente", description: "No hay diagrama o la arquitectura no usa servicios de nube ni enfoque basado en eventos." }
+        ]
+    },
+    {
+        criterion: "Resiliencia, Manejo de Límites y LLM",
+        deliverable: "Código Backend/Cola de Eventos",
+        levels: [
+            { score: "4", label: "Excelente", description: "Procesamiento masivo por lotes (20-30), captura de errores eficiente y reintentos automáticos sin pérdida de datos." },
+            { score: "3", label: "Bueno", description: "Procesa en lotes con manejo de errores básico y políticas de reintento que podrían fallar bajo cargas extremas." },
+            { score: "2", label: "Regular", description: "Procesamiento secuencial o síncrono. Manejo de errores frágil y sin política de reintentos por encolamiento." },
+            { score: "0-1", label: "Deficiente", description: "No hay integración real con LLM, no soporta procesamiento masivo o colapsa al primer límite de API." }
+        ]
+    },
+    {
+        criterion: "Frontend y Experiencia de Usuario",
+        deliverable: "Enlace del Frontend Desplegado",
+        levels: [
+            { score: "4", label: "Excelente", description: "URL pública funcional. Subida de archivos, disparo del flujo y visualización clara e intuitiva de resultados." },
+            { score: "3", label: "Bueno", description: "Enlace público y funcional. Permite subir input y ver resultados, pero la interfaz carece de pulido." },
+            { score: "2", label: "Regular", description: "Frontend desplegado con fallos al subir archivos o mostrar resultados del backend asíncrono." },
+            { score: "0-1", label: "Deficiente", description: "No hay URL pública, el enlace está roto o no se desarrolló interfaz de usuario." }
+        ]
+    },
+    {
+        criterion: "Repositorio, Código y Despliegue",
+        deliverable: "Repositorio y Manual",
+        levels: [
+            { score: "4", label: "Excelente", description: "Código limpio y completo. Manual impecable y docker-compose estructurado si aplica." },
+            { score: "3", label: "Bueno", description: "Código completo y documentado. Manual bueno pero omite detalles menores que el evaluador debe deducir." },
+            { score: "2", label: "Regular", description: "Faltan secciones del código. Manual vago o comandos que fallan, dificultando probar la plataforma." },
+            { score: "0-1", label: "Deficiente", description: "Repositorio inaccesible o incompleto. No hay manual de despliegue." }
+        ]
+    }
+];
+---
+
+{show && (
+    <section id="rubric" class="py-20 bg-black relative">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <div class="h-full w-full bg-[radial-gradient(circle_at_center,_var(--accent-secondary)_0%,_transparent_35%)]"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-bold mb-4 tracking-tighter text-center">
+                <span class="gradient-text">Rúbrica</span> de Evaluación
+            </h2>
+            <p class="text-xl text-white/70 text-center mb-12 max-w-2xl mx-auto">
+                Máximo 4 puntos por criterio. Haz clic en cada uno para ver los detalles.
+            </p>
+
+            <div class="max-w-4xl mx-auto space-y-3">
+                {rubric.map((item, index) => (
+                    <div class="rubric-item border border-white/10 bg-white/[0.03] overflow-hidden">
+                        <button
+                            type="button"
+                            class="rubric-trigger w-full flex items-center justify-between gap-4 p-4 md:p-5 text-left hover:bg-white/5 transition-colors"
+                            data-index={index}
+                            aria-expanded="false"
+                        >
+                            <div class="flex items-center gap-3 md:gap-4 min-w-0">
+                                <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-[#0066ff]/20 text-[#0066ff] font-bold font-mono text-sm">
+                                    {index + 1}
+                                </span>
+                                <div class="min-w-0">
+                                    <h3 class="text-base md:text-lg font-bold text-white truncate">
+                                        {item.criterion}
+                                    </h3>
+                                    <p class="text-xs md:text-sm text-white/50 truncate">
+                                        {item.deliverable}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 flex-shrink-0">
+                                <span class="hidden md:inline-block text-xs font-mono text-[#00ccff] bg-[#00ccff]/10 px-2 py-1">
+                                    0 - 4 pts
+                                </span>
+                                <svg
+                                    class="rubric-icon w-5 h-5 text-white/60 transition-transform"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </button>
+
+                        <div class="rubric-panel hidden border-t border-white/10">
+                            <div class="p-4 md:p-5 space-y-3">
+                                {item.levels.map((level) => (
+                                    <div class="flex gap-3 md:gap-4">
+                                        <span class="flex-shrink-0 w-12 text-center text-sm font-bold text-[#0066ff] font-mono">
+                                            {level.score}
+                                        </span>
+                                        <div class="flex-1">
+                                            <span class="text-sm font-bold text-white">{level.label}:</span>
+                                            <span class="text-sm text-white/70 ml-1">{level.description}</span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+)}
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const triggers = document.querySelectorAll('.rubric-trigger');
+
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.closest('.rubric-item');
+                const panel = item?.querySelector('.rubric-panel');
+                const icon = trigger.querySelector('.rubric-icon');
+                const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+
+                triggers.forEach(t => {
+                    const otherItem = t.closest('.rubric-item');
+                    const otherPanel = otherItem?.querySelector('.rubric-panel');
+                    const otherIcon = t.querySelector('.rubric-icon');
+                    t.setAttribute('aria-expanded', 'false');
+                    otherPanel?.classList.add('hidden');
+                    otherIcon?.classList.remove('rotate-180');
+                });
+
+                if (!isOpen) {
+                    trigger.setAttribute('aria-expanded', 'true');
+                    panel?.classList.remove('hidden');
+                    icon?.classList.add('rotate-180');
+                }
+            });
+        });
+    });
+</script>

@@ -1,4 +1,9 @@
 ---
+export interface Props {
+    showRegister?: boolean;
+}
+
+const { showRegister = true } = Astro.props;
 ---
 
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -20,9 +25,15 @@
         </p>
 
         <div class="flex flex-col md:flex-row gap-4 justify-center">
-            <a href="#register" class="px-8 py-4 bg-[#0066ff] text-white font-bold text-lg hover:bg-[#0052cc] transition-colors">
-                Regístrate Ahora
-            </a>
+            {showRegister ? (
+                <a href="#register" class="px-8 py-4 bg-[#0066ff] text-white font-bold text-lg hover:bg-[#0052cc] transition-colors">
+                    Regístrate Ahora
+                </a>
+            ) : (
+                <a href="#about" class="px-8 py-4 bg-[#0066ff] text-white font-bold text-lg hover:bg-[#0052cc] transition-colors">
+                    Conoce el Reto
+                </a>
+            )}
             <a href="#about" class="px-8 py-4 border border-white text-white font-bold text-lg hover:bg-white hover:text-black transition-colors">
                 Descubre Más
             </a>
