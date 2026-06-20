@@ -13,7 +13,8 @@ El sitio es una **aplicación de una sola página (SPA visual)** compuesta por s
 - **About**: descripción del hackathon y motivos para participar.
 - **Schedule**: calendario interactivo por días (tabs con JavaScript nativo).
 - **Prizes**: tabla de premios (puntos de examen y participación).
-- **Register**: llamado a la acción con enlace a Google Forms.
+- **Register**: llamado a la acción con enlace a Google Forms (opcional).
+- **Submit**: llamado a la acción final para enviar respuestas y entregables a Google Forms.
 - **Footer**: información de contacto y accesos directos.
 
 El idioma del contenido visible es **español**.
@@ -60,6 +61,7 @@ front-end/
     │   ├── Prizes.astro
     │   ├── Register.astro
     │   ├── Rubric.astro      # Sección opcional de rúbrica de evaluación (activable vía prop `show`)
+    │   ├── Submit.astro      # Sección final para el envío de respuestas y entregables
     │   └── Schedule.astro
     ├── layouts/
     │   └── Layout.astro      # Layout base (HTML, metadatos, fuentes, estilos globales)
@@ -167,4 +169,5 @@ Actualmente **no hay configuración de CI/CD** en el repositorio (no hay archivo
 - Si se modifica la paleta de colores, actualízala tanto en `src/styles/global.css` (variables) como en `src/layouts/Layout.astro` (clases y estilos globales).
 - Los datos de horarios y premios viven directamente en los componentes Astro (`Schedule.astro`, `Prizes.astro`). Para cambios de contenido del evento, esos son los archivos principales.
 - `Rubric.astro` y `Register.astro` son secciones opcionales controladas por la prop booleana `show` (por defecto `false` y `true` respectivamente). En `src/pages/index.astro` se definen las constantes `showRegister` y `showRubric` en el frontmatter y se pasan a `Navbar.astro`, `Hero.astro`, `Footer.astro` y a las propias secciones, manteniendo los enlaces y CTAs sincronizados con las secciones visibles.
+- `Submit.astro` es una sección fija al final de la página, justo antes del footer, y enlaza al formulario de entrega de respuestas y entregables.
 - No hay linter ni formatter configurado. Si se agrega Prettier, ESLint o Biome, considérelo una mejora de infraestructura y documente los comandos en esta sección.
