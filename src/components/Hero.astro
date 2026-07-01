@@ -1,12 +1,7 @@
 ---
-export interface Props {
-    showRegister?: boolean;
-}
-
-const { showRegister = true } = Astro.props;
 ---
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+<section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
     <div class="absolute inset-0 z-0">
         <div class="grid grid-cols-10 grid-rows-10 h-full w-full">
             { Array(100).fill(0).map((_, i) => (
@@ -16,34 +11,25 @@ const { showRegister = true } = Astro.props;
     </div>
 
     <div class="container mx-auto px-4 z-10 text-center">
+        <div class="inline-block mb-6 px-4 py-1.5 border border-[#0066ff]/50 rounded-full bg-[#0066ff]/10">
+            <span class="text-[#00ccff] text-sm font-bold tracking-wide uppercase">Resultados Oficiales</span>
+        </div>
+
         <h1 class="text-6xl md:text-8xl lg:text-9xl font-black mb-6 tracking-tighter glitch">
             HACK<span class="text-[#0066ff]">//</span>UTEC
         </h1>
 
         <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-white/80">
-            Atrévete a cambiar las reglas. Imagina el futuro. En solo 24 horas, todo puede pasar.
+            Cloud Computing 2026 — Conoce a los equipos que participaron, a los ganadores del podio y descarga los certificados de cada integrante.
         </p>
 
         <div class="flex flex-col md:flex-row gap-4 justify-center">
-            {showRegister ? (
-                <a href="#register" class="px-8 py-4 bg-[#0066ff] text-white font-bold text-lg hover:bg-[#0052cc] transition-colors">
-                    Regístrate Ahora
-                </a>
-            ) : (
-                <a href="#about" class="px-8 py-4 bg-[#0066ff] text-white font-bold text-lg hover:bg-[#0052cc] transition-colors">
-                    Conoce el Reto
-                </a>
-            )}
-            <a href="#about" class="px-8 py-4 border border-white text-white font-bold text-lg hover:bg-white hover:text-black transition-colors">
-                Descubre Más
+            <a href="#podium" class="px-8 py-4 bg-[#0066ff] text-white font-bold text-lg hover:bg-[#0052cc] transition-colors">
+                Ver Podio
             </a>
-        </div>
-
-        <div class="mt-16 flex items-center justify-center gap-4">
-            <div class="text-center">
-                <p class="text-white/60">Fecha</p>
-                <p class="text-xl font-bold">Viernes 19 & Sábado 20 de Junio</p>
-            </div>
+            <a href="#teams" class="px-8 py-4 border border-white text-white font-bold text-lg hover:bg-white hover:text-black transition-colors">
+                Ver Equipos
+            </a>
         </div>
     </div>
 

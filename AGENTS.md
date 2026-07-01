@@ -4,17 +4,14 @@
 
 ## 1. Descripción general
 
-Este repositorio contiene el **sitio web estático de HACK//UTEC**, una landing page para un hackathon organizado por UTEC. Aunque el campo `name` de `package.json` es `"attendance"`, el contenido real del sitio es la página promocional del evento HACK//UTEC 2026.
+Este repositorio contiene el **sitio web estático de resultados de HACK//UTEC**, una página de resultados para el hackathon de Cloud Computing organizado por UTEC. Aunque el campo `name` de `package.json` es `"attendance"`, el contenido actual del sitio muestra el podio de ganadores, los equipos participantes y los certificados descargables almacenados en Object Storage de OCI.
 
 El sitio es una **aplicación de una sola página (SPA visual)** compuesta por secciones:
 
-- **Navbar**: navegación fija con enlaces ancla.
-- **Hero**: presentación principal del evento.
-- **About**: descripción del hackathon y motivos para participar.
-- **Schedule**: calendario interactivo por días (tabs con JavaScript nativo).
-- **Prizes**: tabla de premios (puntos de examen y participación).
-- **Register**: llamado a la acción con enlace a Google Forms (opcional).
-- **Submit**: llamado a la acción final para enviar respuestas y entregables a Google Forms.
+- **Navbar**: navegación fija con enlaces ancla (Podio, Equipos).
+- **Hero**: presentación de la página de resultados.
+- **Podium**: podio visual con los 3 equipos ganadores, sus integrantes y enlaces a certificados/proyectos.
+- **TeamsList**: cuadrícula de equipos participantes; cada tarjeta abre un modal con los integrantes y botones para descargar certificados.
 - **Footer**: información de contacto y accesos directos.
 
 El idioma del contenido visible es **español**.
@@ -52,23 +49,23 @@ front-end/
 │   ├── _headers              # Cabeceras HTTP personalizadas (COOP/COEP vacías)
 │   ├── bg.svg                # Fondo de ruido visual
 │   └── logo.webp             # Favicon / logo del evento
-└── src/
-    ├── components/           # Componentes Astro de la landing page
-    │   ├── About.astro       # Incluye el resumen del reto y un modal con el contenido completo del PDF
-    │   ├── Footer.astro
-    │   ├── Hero.astro
-    │   ├── Navbar.astro
-    │   ├── Prizes.astro
-    │   ├── Register.astro
-    │   ├── Rubric.astro      # Sección opcional de rúbrica de evaluación (activable vía prop `show`)
-    │   ├── Submit.astro      # Sección final para el envío de respuestas y entregables
-    │   └── Schedule.astro
-    ├── layouts/
-    │   └── Layout.astro      # Layout base (HTML, metadatos, fuentes, estilos globales)
-    ├── pages/
-    │   └── index.astro       # Página única que compone todas las secciones
-    └── styles/
-        └── global.css        # Variables CSS de shadcn/ui + tema claro/oscuro + utilidades Tailwind
+├── scripts/
+│   └── generate-results.py   # Script Python que cruza inscripciones, entregas y certificados
+├── src/
+│   ├── components/           # Componentes Astro de la página de resultados
+│   │   ├── Footer.astro
+│   │   ├── Hero.astro
+│   │   ├── Navbar.astro
+│   │   ├── Podium.astro      # Podio de ganadores
+│   │   └── TeamsList.astro   # Lista de equipos con modal de integrantes y certificados
+│   ├── data/
+│   │   └── results.json      # Datos generados de equipos, ganadores y certificados
+│   ├── layouts/
+│   │   └── Layout.astro      # Layout base (HTML, metadatos, fuentes, estilos globales)
+│   ├── pages/
+│   │   └── index.astro       # Página única que compone todas las secciones
+│   └── styles/
+│       └── global.css        # Variables CSS de shadcn/ui + tema claro/oscuro + utilidades Tailwind
 ```
 
 ## 4. Comandos de desarrollo, build y preview
@@ -105,7 +102,7 @@ pnpm preview
 ### 5.2 Componentes Astro
 
 - Cada sección de la página es un componente `.astro` en `src/components/`.
-- El frontmatter (`---`) se usa para definir datos estáticos, como los arreglos `schedule` y `prizes`.
+- El frontmatter (`---`) se usa para definir datos estáticos. Los datos de equipos, puntajes y certificados viven en `src/data/results.json` y se generan con `scripts/generate-results.py`.
 - Los estilos globales del layout están en `src/layouts/Layout.astro` dentro de una etiqueta `<style is:global>`.
 - Los estilos locales de un componente se colocan en `<style>` dentro del mismo archivo (ej. `Schedule.astro`).
 
@@ -126,7 +123,7 @@ pnpm preview
 
 ### 5.5 JavaScript nativo
 
-- La interactividad es mínima: `Schedule.astro` usa JavaScript nativo del lado del cliente para cambiar entre tabs.
+- La interactividad es mínima: `TeamsList.astro` usa JavaScript nativo del lado del cliente para abrir/cerrar el modal de integrantes.
 - No hay componentes React, hooks ni estado en uso.
 
 ## 6. Instrucciones de testing
@@ -167,7 +164,6 @@ Actualmente **no hay configuración de CI/CD** en el repositorio (no hay archivo
 - Este es un proyecto pequeño y enfocado: **landing page estática de una sola página**. Evita agregar complejidad innecesaria (rutas, estado global, backend, etc.) salvo que el usuario lo solicite explícitamente.
 - Antes de instalar nuevos componentes de shadcn/ui, verifica que el CLI de shadcn/ui sea compatible con Tailwind v4 y la configuración actual.
 - Si se modifica la paleta de colores, actualízala tanto en `src/styles/global.css` (variables) como en `src/layouts/Layout.astro` (clases y estilos globales).
-- Los datos de horarios y premios viven directamente en los componentes Astro (`Schedule.astro`, `Prizes.astro`). Para cambios de contenido del evento, esos son los archivos principales.
-- `Rubric.astro` y `Register.astro` son secciones opcionales controladas por la prop booleana `show` (por defecto `false` y `true` respectivamente). En `src/pages/index.astro` se definen las constantes `showRegister` y `showRubric` en el frontmatter y se pasan a `Navbar.astro`, `Hero.astro`, `Footer.astro` y a las propias secciones, manteniendo los enlaces y CTAs sincronizados con las secciones visibles.
-- `Submit.astro` es una sección fija al final de la página, justo antes del footer, y enlaza al formulario de entrega de respuestas y entregables.
+- Los datos de equipos, puntajes y certificados viven en `src/data/results.json`. Para actualizarlos, ejecuta `scripts/generate-results.py` (requiere `openpyxl`).
+- Los componentes antiguos de contenido informativo (`About.astro`, `Schedule.astro`, `Prizes.astro`, `Rubric.astro`, `Register.astro`, `Submit.astro`) ya no se usan en `src/pages/index.astro`, pero permanecen en el repositorio por si se necesitan en el futuro.
 - No hay linter ni formatter configurado. Si se agrega Prettier, ESLint o Biome, considérelo una mejora de infraestructura y documente los comandos en esta sección.

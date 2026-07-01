@@ -1,0 +1,478 @@
+{
+  "generatedAt": "2026-06-30",
+  "podium": [
+    {
+      "position": 1,
+      "key": "grupo",
+      "name": "Grupo++",
+      "score": 20.0,
+      "github": "https://github.com/JavierCastr0b/ecosat-ai.git",
+      "solution": "http://ecosat-backend-frontend-dev-285023351044.s3-website-us-east-1.amazonaws.com/login",
+      "members": [
+        {
+          "name": "Javier Alejandro Castro Barreto",
+          "code": "202310081",
+          "section": "2",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FJavier_Alejandro_Castro_Barreto.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "position": 2,
+      "key": "duolingo",
+      "name": "Duolingo",
+      "score": 20.0,
+      "github": "https://github.com/lFunkwnon01/sentinel-academia-hub",
+      "solution": "* Descripción: *Sentinel AcademIA es una plataforma serverless multi-nube que centraliza, analiza y prioriza las quejas de la comunidad universitaria mediante inteligencia artificial generativa, reduciendo el tiempo de primera respuesta de días a minutos y permitiendo la detección temprana de casos críticos (salud mental, acoso, riesgo físico). La solución transforma tres canales fragmentados y obsoletos en una plataforma única disponible 24/7, con dashboard institucional, alertas en tiempo real y asistente conversacional basado en RAG sobre el reglamento universitario.   *Link de carpeta drive* https://drive.google.com/drive/folders/1j9SutDkzI6reLy7b1Ichv-vtc5orUfMq",
+      "members": [
+        {
+          "name": "Aracely Yobely Ayala Pereda",
+          "code": "202220416",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FAracely_Yobely_Ayala_Pereda.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Fabricio Godofredo Ladera La torre",
+          "code": "202310274",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FFabricio_Godofredo_Ladera_La_Torre.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "position": 3,
+      "key": "fvpf",
+      "name": "FVPF (Fabiana Vuelve Por Favor)",
+      "score": 18.0,
+      "github": "https://github.com/steve-ricapa/XOC_PAGE -- https://github.com/steve-ricapa/XOC-API-AWS",
+      "solution": "https://drive.google.com/drive/folders/1v1AMuSGqRDlKclXnnsDx9upFwGZLlyqb?usp=sharing",
+      "members": [
+        {
+          "name": "Santiago Miguel Silva Reyes",
+          "code": "202310266",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FSantiago_Miguel_Silva_Reyes.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Steve Bryan Ricapa Montoya",
+          "code": "202110758",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FSteve_Bryan_Ricapa_Montoya.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Santiago Aldebaran Cama Ardiles",
+          "code": "202220381",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FSantiago_Aldebaran_Cama_Ardiles.png",
+          "certificateFound": true
+        }
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "key": "tricloud",
+      "name": "TriCloud",
+      "score": 17.0,
+      "github": "repo de backend:https://github.com/darlene04/BACKEND-CLOUD.git\nrepo de fronted:https://github.com/darlene04/hackaton-cloud-frontend.git\nfronted  web: https://hackaton-cloud-computing-grfvtht8u.vercel.app",
+      "solution": "https://youtu.be/h_sMHHuFJnA",
+      "members": [
+        {
+          "name": "Josué Luna Rocha",
+          "code": "202220430",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FJosue_Luna_Rocha.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Francis Huerta Roque",
+          "code": "202310535",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FFrancis_Huerta_Roque.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Darlene Priyanka Escobar Hinojosa",
+          "code": "202310296",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FDarlene_Priyanka_Escobar_Hinojosa.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "0 amor 100 de fe",
+      "name": "0% amor, 100% de fe",
+      "score": 16.0,
+      "github": "https://github.com/oswaldoaqm/rubricaia",
+      "solution": "AMPLIFY: https://main.d2aurxjj1g5f03.amplifyapp.com/ -                                                                                \nVIDEO: https://drive.google.com/file/d/1VOC5GfesNwed-VpUZWvgdijdne33kBvN/view?usp=sharing      ////// El video demora mucho xd, pero al principio es explicación de la problemática y el diagrama, de ahí hago la demo (exactamente en el minuto 7:40 empiezo a hacer todo) (por fa aceptenme trabaje todo solo hubieron inconvenientesss xd)",
+      "members": [
+        {
+          "name": "Oswaldo Alejandro Quispe Monzón",
+          "code": "202320077",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FOswaldo_Alejandro_Quispe_Monzon.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Paul Ricardo Maguiña Quispe",
+          "code": "202320192",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FPaul_Ricardo_Maguina_Quispe.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Sebastián Daniel Cangalaya Martinez",
+          "code": "202410453",
+          "section": "2",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FSebastian_Daniel_Cangalaya_Martinez.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "ctrl z",
+      "name": "Ctrl+Z",
+      "score": 16.0,
+      "github": "https://github.com/MiguelR-exe/examforge-ai.git",
+      "solution": "https://youtu.be/ZL8IoNKG_ek",
+      "members": [
+        {
+          "name": "Fernando Espinoza Torres",
+          "code": "202410465",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FFernando_Espinoza_Torres.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Miguel Ramos Bonilla",
+          "code": "202210276",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FMiguel_Ramos_Bonilla.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "momazos cloud comp",
+      "name": "MomazosCloudComp👀",
+      "score": 16.0,
+      "github": "https://github.com/DmGv23/HACK_CLOUD.git",
+      "solution": "https://docs.google.com/document/d/1_8MPywwruszJltQcBaZVki1efmtbX2zY/edit?usp=sharing&ouid=112631510954482787951&rtpof=true&sd=true",
+      "members": [
+        {
+          "name": "Eduardo Salvador Guevara Vargas",
+          "code": "202410096",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FEduardo_Salvador_Guevara_Vargas.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Danna Nickol Gala Vásquez",
+          "code": "202410573",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FDanna_Nickol_Gala_Vasquez.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Raúl Janampa",
+          "code": "202410411",
+          "section": "2",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FRaul_Janampa.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "busco reca",
+      "name": "Busco-Reca",
+      "score": 14.0,
+      "github": "Link al Backend: https://github.com/Eddddddd06/Backend-AttendIA.git\nLink al Frontend: https://github.com/Eddddddd06/Frontend-AttendIA.git",
+      "solution": "Credenciales necesarias para la IA: https://docs.google.com/document/d/1uYqv6FCaZnL6j9A9QtIynna5MdiZqPSwciRiVSCeJSA/edit?usp=sharing\nVideo demostrativo de la Demo: https://drive.google.com/drive/folders/1SQoG_XmXxM4jigKUFB3hTzqFp9w4N3Nn?usp=sharing",
+      "members": [
+        {
+          "name": "Rayhan Derek Matos Copello",
+          "code": "202410377",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FRayhan_Derek_Matos_Copello.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Bruno Gonzalo Vega Napan",
+          "code": "202410098",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FBruno_Gonzalo_Vega_Napan.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Eduardo Gabriel Osorio Panduro",
+          "code": "202410406",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FEduardo_Gabriel_Osorio_Panduro.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "seguros mapfre",
+      "name": "SegurosMapfre",
+      "score": 14.0,
+      "github": "https://github.com/gmborjasb/hackathon-triaje-it.git",
+      "solution": "https://drive.google.com/drive/folders/14pwrVreYR-zq-ekTveQ2LcvlYUx4Wxm7?usp=drive_link",
+      "members": [
+        {
+          "name": "José Luis Alva Espinoza",
+          "code": "202420038",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FJose_Luis_Alva_Espinoza.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Javier Pariansullca Ventura",
+          "code": "202420057",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FJavier_Pariansullca_Ventura.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Marcelo Gerald Borjas",
+          "code": "202510059",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FMarcelo_Gerald_Borjas.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "hfb",
+      "name": "HFB",
+      "score": 13.0,
+      "github": "https://github.com/hectorcaballero1/front-hfback\nhttps://github.com/hectorcaballero1/hfback",
+      "solution": "2.- El contexto está en el README.md del repositorio hfback\n3.- El manual de despliegue está en el README.md del repositorio hfback\n4.- El diagrama de arquitectura está en el README.md del repositorio hfback\n5.- https://main.df4kc9osn9bdn.amplifyapp.com/\n6.- https://youtu.be/rRLAzNsa_1Y?si=yM92D0C6VbSm-cbd",
+      "members": [
+        {
+          "name": "Kenzo Akira Shibuya Rengifo",
+          "code": "202420098",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FKenzo_Akira_Shibuya_Rengifo.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Hector Junior Caballero Canchanya",
+          "code": "202420043",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FHector_Junior_Caballero_Canchanya.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "los",
+      "name": "los",
+      "score": 13.0,
+      "github": "https://github.com/Joaquin-oc/Cloud-hackaton.git",
+      "solution": "https://drive.google.com/drive/folders/1Oce5RWRL5KfcxodIp26SDNRBB-JyVbOE",
+      "members": [
+        {
+          "name": "Suarez Arzapalo Benjamin Mario Augusto",
+          "code": "202410391",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FSuarez_Arzapalo_Benjamin_Mario_Augusto.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Ocaña Aniya Joaquin Andre",
+          "code": "202410542",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FOcana_Aniya_Joaquin_Andre.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Rios Gomez Valeria Valentina",
+          "code": "202410492",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FRios_Gomez_Valeria_Valentina.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "los rimacsitos",
+      "name": "Los rimacsitos",
+      "score": 12.0,
+      "github": "https://github.com/sebastianloli/cv-ranker-cloud-.git \nhttps://drive.google.com/drive/folders/1WFf5wpGCP22TS9GGRO0JUoekKUlJXNDS",
+      "solution": "https://main.d2ydxzg8o7v1ni.amplifyapp.com/",
+      "members": [
+        {
+          "name": "rafael rodrigo choque coaquira",
+          "code": "202410378",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FRafael_Rodrigo_Choque_Coaquira.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Sebastian Loli Gonzalez",
+          "code": "202420022",
+          "section": "2",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FSebastian_Loli_Gonzalez.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Henrry André Valle Enriquez",
+          "code": "202310310",
+          "section": "2",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FHenrry_Andre_Valle_Enriquez.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "yeial",
+      "name": "Yeial",
+      "score": 11.0,
+      "github": "https://github.com/alexaliaga16/Mediprior_Hackaton_cloud",
+      "solution": "https://main.d1x79kqokvl757.amplifyapp.com/",
+      "members": [
+        {
+          "name": "José Álvaro Rojas Cruz",
+          "code": "202410494",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FJose_Alvaro_Rojas_Cruz.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Fredy Alexander Cardenas Aliaga",
+          "code": "202420013",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FFredy_Alexander_Cardenas_Aliaga.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Luis Enrique Cahuana Garcia",
+          "code": "202410551",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FLuis_Enrique_Cahuana_Garcia.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "justoprime",
+      "name": "JustoPrime",
+      "score": 10.0,
+      "github": "https://github.com/SReateguiUtec/SanaFlow.git",
+      "solution": "web: https://main.d3lsjzv5me8n6j.amplifyapp.com/\nvideo: https://youtu.be/Eo7TTj1-2j8",
+      "members": [
+        {
+          "name": "Juan Marcelo Ferreyra Gonzales",
+          "code": "202410166",
+          "section": "2",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FJuan_Marcelo_Ferreyra_Gonzales.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Sebastian Hernan Reategui Bellido",
+          "code": "202410048",
+          "section": "2",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FSebastian_Hernan_Reategui_Bellido.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "claude y 3 mas",
+      "name": "Claude y 3 mas",
+      "score": 9.0,
+      "github": "https://github.com/alxgr-08/Hackaton_Cloud_Computing",
+      "solution": "Frontend: https://hackaton-2fcba.web.app/\nInforme y video: https://drive.google.com/drive/folders/1wu_ZOw7Rn3UD-U9LBmlWi-qj7XimMPUv?usp=sharing\n\nEl resto de entregables se encuentra en el repositorio.",
+      "members": [
+        {
+          "name": "Jean Luka Terrazo Santiago",
+          "code": "202410422",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FJean_Luka_Terrazo_Santiago.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Diego Alexis Gil Rojas",
+          "code": "202320036",
+          "section": "2",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FDiego_Alexis_Gil_Rojas.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Jesus Cadillo Espantoso",
+          "code": "202310038",
+          "section": "2",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FJesus_Cadillo_Espantoso.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "ggno team",
+      "name": "GGnoTeam",
+      "score": 4.0,
+      "github": "https://github.com/Lazheart/hack-20261",
+      "solution": "https://github.com/Lazheart/hack-20261",
+      "members": [
+        {
+          "name": "Andy Raí Berrú Tenorio",
+          "code": "202410143",
+          "section": "2",
+          "certificateFound": false
+        },
+        {
+          "name": "Leandro Nadir Demarini Leyton",
+          "code": "202410444",
+          "section": "3",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FLeandro_Nadir_Demarini_Leyton.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Benjamín Llerena",
+          "code": "202310280",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FBenjamin_Llerena.png",
+          "certificateFound": true
+        }
+      ]
+    },
+    {
+      "key": "reflogs",
+      "name": "Reflogs",
+      "score": 3.0,
+      "github": "https://github.com/CarlosVillegasArce/hackathon-cloud",
+      "solution": "Sari: Automatiza la atención ciudadana clasificando y derivando reclamos en segundos mediante Inteligencia Artificial.",
+      "members": [
+        {
+          "name": "Hector Emilio Huaman Puiquin",
+          "code": "202410387",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FHector_Emilio_Huaman_Puiquin.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Miguel Angel Mori Valderrama",
+          "code": "202310119",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FMiguel_Angel_Mori_Valderrama.png",
+          "certificateFound": true
+        },
+        {
+          "name": "Carlos Alberto Villegas Arce",
+          "code": "202320109",
+          "section": "1",
+          "certificateUrl": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsyv6soirbc/b/cloud-hackaton/o/certificados%2FCarlos_Alberto_Villegas_Arce.png",
+          "certificateFound": true
+        }
+      ]
+    }
+  ],
+  "unmatchedSubmissions": []
+}

@@ -1,29 +1,19 @@
 ---
-import About from "../components/About.astro";
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
-import Schedule from '../components/Schedule.astro';
-import Prizes from '../components/Prizes.astro';
-import Rubric from '../components/Rubric.astro';
-import Register from '../components/Register.astro';
-import Submit from '../components/Submit.astro';
+import Podium from '../components/Podium.astro';
+import TeamsList from '../components/TeamsList.astro';
 import Footer from '../components/Footer.astro';
-
-const showRegister = false;
-const showRubric = true;
+import results from '../data/results.json';
 ---
 
-<Layout title="HACK//UTEC">
-    <Navbar showRegister={showRegister} showRubric={showRubric}/>
+<Layout title="Resultados HACK//UTEC">
+    <Navbar/>
     <main>
-        <Hero showRegister={showRegister}/>
-        <About/>
-        <Rubric show={showRubric}/>
-        <Schedule/>
-        <Prizes/>
-        <Register show={showRegister}/>
-        <Submit/>
+        <Hero/>
+        <Podium teams={results.podium}/>
+        <TeamsList teams={results.teams} totalTeams={results.podium.length + results.teams.length}/>
     </main>
-    <Footer showRegister={showRegister} showRubric={showRubric}/>
+    <Footer/>
 </Layout>
