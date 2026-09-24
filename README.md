@@ -25,14 +25,21 @@ La página que se muestra se arma en `src/pages/index.astro`.
 
 ## Generar resultados
 
-`scripts/generate-results.py` cruza las respuestas de los formularios de inscripción y entrega (CSV) con la hoja de certificados (`certificados.xlsx`) y genera `src/data/results.json`:
+`scripts/generate-results.py` cruza las respuestas de los formularios de inscripción y entrega con la hoja de certificados y genera `src/data/results.json`.
+
+Los archivos de entrada contienen datos personales de los participantes (correos, nombres, códigos y notas), así que **no se versionan**: van en la carpeta `data/`, que está en `.gitignore`.
+
+```
+data/
+├── Formulario de inscripción HACK __ UTEC (respuestas) - Respuestas de formulario 1.csv
+├── Entregas HACK__UTEC Cloud Computing (Respuestas) - Respuestas de formulario 1.csv
+└── certificados.xlsx
+```
 
 ```bash
 pip install openpyxl
 python scripts/generate-results.py
 ```
-
-> ⚠️ Los CSV y `results.json` contienen datos personales de los participantes (nombres, correos y códigos de alumno). Mantén este repositorio **privado**.
 
 ## Desarrollo
 
@@ -46,7 +53,7 @@ pnpm preview
 ## Nueva edición
 
 1. Actualiza fechas, reto y requisitos en los componentes de convocatoria (`Schedule`, `Rubric`, `Prizes`, `public/Reto Hackathon Cloud.pdf`).
-2. Al cerrar el evento, reemplaza los CSV y `certificados.xlsx`, ejecuta el script y cambia `index.astro` a la vista de resultados.
+2. Al cerrar el evento, descarga los CSV de los formularios y `certificados.xlsx` en `data/`, ejecuta el script y cambia `index.astro` a la vista de resultados.
 3. `pnpm build` y sube `dist/` al bucket.
 
 Más detalles de arquitectura y convenciones en [`AGENTS.md`](AGENTS.md).

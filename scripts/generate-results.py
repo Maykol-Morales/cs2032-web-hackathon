@@ -11,13 +11,16 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC_DATA = ROOT / "src" / "data"
 SRC_DATA.mkdir(parents=True, exist_ok=True)
 
-INSCRIPCIONES_CSV = ROOT / (
+# Datos privados de participantes (ignorados por git)
+PRIVATE_DATA = ROOT / "data"
+
+INSCRIPCIONES_CSV = PRIVATE_DATA / (
     "Formulario de inscripción HACK __ UTEC (respuestas) - Respuestas de formulario 1.csv"
 )
-ENTREGAS_CSV = ROOT / (
+ENTREGAS_CSV = PRIVATE_DATA / (
     "Entregas HACK__UTEC Cloud Computing (Respuestas) - Respuestas de formulario 1.csv"
 )
-CERTIFICADOS_XLSX = ROOT / "certificados.xlsx"
+CERTIFICADOS_XLSX = PRIVATE_DATA / "certificados.xlsx"
 
 
 def repair_excel_text(s: str) -> str:

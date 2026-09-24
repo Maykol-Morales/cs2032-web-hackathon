@@ -164,6 +164,6 @@ Actualmente **no hay configuración de CI/CD** en el repositorio (no hay archivo
 - Este es un proyecto pequeño y enfocado: **landing page estática de una sola página**. Evita agregar complejidad innecesaria (rutas, estado global, backend, etc.) salvo que el usuario lo solicite explícitamente.
 - Antes de instalar nuevos componentes de shadcn/ui, verifica que el CLI de shadcn/ui sea compatible con Tailwind v4 y la configuración actual.
 - Si se modifica la paleta de colores, actualízala tanto en `src/styles/global.css` (variables) como en `src/layouts/Layout.astro` (clases y estilos globales).
-- Los datos de equipos, puntajes y certificados viven en `src/data/results.json`. Para actualizarlos, ejecuta `scripts/generate-results.py` (requiere `openpyxl`).
+- Los datos de equipos, puntajes y certificados viven en `src/data/results.json`. Para actualizarlos, ejecuta `scripts/generate-results.py` (requiere `openpyxl`). Los archivos de entrada (CSV de formularios y `certificados.xlsx`) van en `data/`, que está en `.gitignore` porque contiene datos personales; nunca los versiones.
 - Los componentes antiguos de contenido informativo (`About.astro`, `Schedule.astro`, `Prizes.astro`, `Rubric.astro`, `Register.astro`, `Submit.astro`) ya no se usan en `src/pages/index.astro`, pero permanecen en el repositorio por si se necesitan en el futuro.
 - No hay linter ni formatter configurado. Si se agrega Prettier, ESLint o Biome, considérelo una mejora de infraestructura y documente los comandos en esta sección.
